@@ -4,7 +4,7 @@ Author: Krptyk
 Version: 0.0.1
  
 Description:
-This script is a Go implementation of a dynamic shellcode loader for Windows. It is designed to decrypt and execute encrypted shellcode in memory, leveraging Windows API functionalities to allocate memory, set appropriate permissions, and finally execute the shellcode via utilising rundll32.exe with an insertion point of ExecuteShellcode.
+This code is a Go implementation of a shellcode loader for Windows. It is designed to decrypt and execute encrypted shellcode in memory, leveraging Windows API functionalities to allocate memory, set appropriate permissions, and finally execute the shellcode via utilising rundll32.exe with an insertion point of ExecuteShellcode.
  
 Usage:
 1. Replace "SHELLCODE HERE" with your encrypted shellcode in the "encryptedShellcode" array.

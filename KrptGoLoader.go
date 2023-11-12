@@ -13,7 +13,7 @@ Usage:
 4. Execute the compiled binary/DLL to run the shellcode in a Windows environment. e.g rundll32.exe bypassdll.dll,ExecuteShellcode
  
 Security Warning:
-This script is intended for educational and research purposes only. Utilize it responsibly and ethically, adhering to legal guidelines and consented environments. The creator assumes no responsibility for misuse or any potential damage arising from the use of this script.
+This is intended for educational and research purposes only. Utilize it responsibly and ethically, adhering to legal guidelines and consented environments. The creator assumes no responsibility for misuse or any potential damage arising from the use of this script.
  
 Compilation:
 Recommended compilation command (suitable for Windows):

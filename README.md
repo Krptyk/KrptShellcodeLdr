@@ -1,6 +1,9 @@
 # DLL Shellcode Loader & Shellcode Encryption
 
-This project demonstrates the creation of a DLL shellcode loader in Golang tailored for Windows environments, aiming to bypass specific security measures, particularly Windows Defender (UPDATE: As of 4th Jan 2024 it is now detected and signatured by defender). Moreover, it explores a technique to encrypt shellcode using XOR encryption, making it more elusive to AV static detection.
+This project demonstrates the creation of a DLL shellcode loader in Golang tailored for Windows environments, aiming to bypass specific security measures, particularly Windows Defender  Moreover, it explores a technique to encrypt shellcode using XOR encryption, making it more elusive to AV static detection.
+
+## UPDATES:
+As of 4th Jan 2024 it is now detected and signatured by defender
 
 # Full walkthrough
 ### <a href="https://krptyk.com/2023/09/20/encrypting-shellcode-to-evade-av/" target="_blank">Encrypting Shellcode to Evade AV</a>

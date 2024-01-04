@@ -22,7 +22,7 @@ The tutorials and code shared through this project are for educational purposes 
 Compile command for building the loader:
 
 
-    CC=x86_64-w64-mingw32-gcc GOOS=windows GOARCH=amd64 CGO_ENABLED=1 go build -buildmode=c-shared -o bypassdll.dll bypassdll.go
+    CC=x86_64-w64-mingw32-gcc GOOS=windows GOARCH=amd64 CGO_ENABLED=1 go build -buildmode=c-shared -o bypassdll.dll KrptGoLoader.go
 
 
 ## Dependencies

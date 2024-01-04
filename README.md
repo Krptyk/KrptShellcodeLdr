@@ -3,7 +3,13 @@
 This project demonstrates the creation of a DLL shellcode loader in Golang tailored for Windows environments, aiming to bypass specific security measures, particularly Windows Defender  Moreover, it explores a technique to encrypt shellcode using XOR encryption, making it more elusive to AV static detection.
 
 ## UPDATES:
-As of 4th Jan 2024 it is now detected and signatured by defender
+04/01/2024 - Detected and signatured by defender
+04/01/2024 - To not get picked up by Defender update the code with the following:
+    - Initially allocate memory with read/write permissions
+    - Write the shellcode into the allocated memory
+    - Change the memory permissions to read/execute using VirtualProtect API
+    - I also suggest adding a timer check to compare the start of the sleep to the current system time and once its finished compare the the system time to make sure the full time has passed and if not then simply exit (Scanner will fast forward through sleep timers)
+        
 
 # Full walkthrough
 ### <a href="https://krptyk.com/2023/09/20/encrypting-shellcode-to-evade-av/" target="_blank">Encrypting Shellcode to Evade AV</a>

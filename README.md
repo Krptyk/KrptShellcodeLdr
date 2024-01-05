@@ -5,11 +5,21 @@ This project demonstrates the creation of a DLL shellcode loader in Golang tailo
 ## UPDATES:
 04/01/2024 - Detected and signatured by defender
 
-04/01/2024 - To not get picked up by Defender update the code with the following:
-    - Initially allocate memory with read/write permissions
-    - Write the shellcode into the allocated memory
-    - Change the memory permissions to read/execute using VirtualProtect API
-    - I also suggest adding a timer check to compare the start of the sleep to the current system time and once its finished compare the the system time to make sure the full time has passed and if not then simply exit (Scanner will fast forward through sleep timers)
+0## 4/01/2024 - Avoiding Detection by Defender: Code Update Recommendations
+
+To ensure your code does not get flagged by Windows Defender, consider the following updates:
+
+1. **Allocate Memory with Read/Write Permissions**: Start by allocating memory that has read/write access.
+
+2. **Write Shellcode into Allocated Memory**: After memory allocation, write your shellcode into this memory space.
+
+3. **Change Memory Permissions with VirtualProtect API**: Once the shellcode is in place, use the VirtualProtect API to modify the memory permissions to read/execute.
+
+4. **Implement a Timer Check**:
+    - **Start Time Comparison**: Add a check to compare the start of the sleep timer to the current system time.
+    - **End Time Verification**: After the sleep duration, compare the current system time again to ensure that the full time has passed.
+    - **Exit on Fast Forward**: If the full time has not elapsed (which could indicate a scanner fast-forwarding through sleep timers), then exit the program. This step helps in evading scanners that skip through sleep timers.
+
         
 
 # Full walkthrough

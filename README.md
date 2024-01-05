@@ -4,6 +4,7 @@ This project demonstrates the creation of a DLL shellcode loader in Golang tailo
 
 ## UPDATES:
 04/01/2024 - Detected and signatured by defender
+
 04/01/2024 - To not get picked up by Defender update the code with the following:
     - Initially allocate memory with read/write permissions
     - Write the shellcode into the allocated memory

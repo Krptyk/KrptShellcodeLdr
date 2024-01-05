@@ -10,11 +10,8 @@ This project demonstrates the creation of a DLL shellcode loader in Golang tailo
 To ensure your code does not get flagged by Windows Defender, consider the following updates:
 
 1. **Allocate Memory with Read/Write Permissions**: Start by allocating memory that has read/write access.
-
 2. **Write Shellcode into Allocated Memory**: After memory allocation, write your shellcode into this memory space.
-
 3. **Change Memory Permissions with VirtualProtect API**: Once the shellcode is in place, use the VirtualProtect API to modify the memory permissions to read/execute.
-
 4. **Implement a Timer Check**:
     - **Start Time Comparison**: Add a check to compare the start of the sleep timer to the current system time.
     - **End Time Verification**: After the sleep duration, compare the current system time again to ensure that the full time has passed.
